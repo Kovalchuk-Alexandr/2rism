@@ -1,0 +1,15 @@
+.header {
+    height: 800px;
+    padding: 31px 0 100px ;
+    background-color: black;
+    background-image: url("../../img/header/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    color: #fff;
+    border-radius: 0 0 54px 54px;
+}
+
+.header a {
+    color: #fff;
+}

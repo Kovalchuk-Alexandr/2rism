@@ -1,0 +1,70 @@
+@media (max-width: 1230px) {
+    .form {
+        width: auto;
+        height: auto;
+    }
+
+    .easepick-wrapper {
+        z-index: 9;
+    }
+
+    .form__input--location {
+        width: 250px;
+    }
+
+    .form__input--activity {
+        width: 180px;
+    }
+
+    .form__input--calendar {
+        width: 200px;
+    }
+
+    .form__input--guests {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .header {
+        height: auto;
+        min-height: 500px;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .container--header {
+        justify-content: flex-start;
+        row-gap: 90px;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .nav__user {
+        display: none;
+    }
+}
+
+@media (max-width: 1040px) {
+    .form {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .form__input-wrapper {
+        width: 100%;
+    }
+
+    .button--search {
+        width: 100%;
+    }
+
+    .autoComplete_wrapper > input {
+        width: auto !important;
+    }
+}

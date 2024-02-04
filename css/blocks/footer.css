@@ -1,0 +1,232 @@
+.footer {
+    padding: 120px 0;
+    background-color: #F9F9F9;
+}
+
+.footer_row {
+    display: grid;
+    /* grid-template-columns: repeat(3, auto); */
+    grid-template-areas:
+        'copyright nav-row subscribe';
+    gap: 64px;
+}
+
+
+/* =============== Footer Copyright  ============================== */
+
+.footer__copyright {
+    grid-area: copyright;
+    display: grid;
+    gap: 16px;
+    /* max-width: 355px; */
+    min-width: 220px;
+}
+
+.footer__text {
+    margin-bottom: 16px;
+
+    color: #5B5B5B;
+    font-size: 13px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.footer__socials-item {
+    width: 30px;
+    height: 32px;
+}
+
+/* =============== Footer NAV  ============================== */
+
+.footer__nav-wrapper {
+    grid-area: nav-row;
+    display: flex;
+    gap: 64px;
+}
+
+.footer__nav {
+    grid-area: nav;
+    display: grid;
+    gap: 20px;
+
+    min-width: 126px;
+}
+
+.footer__nav-title {
+    color: #161414;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer__nav-list {
+    display: grid;
+    gap: 12px;
+}
+
+.footer__nav-link {
+    color: #5B5B5B;
+    font-size: 13px;
+    transition: all 0.2s ease-in;
+}
+
+.footer__nav-link:hover {
+    color: #7B61FF;
+    font-size: 14px;
+    font-weight: 500;
+
+    /* color: #F9F9F9;
+    background-color: #7B61FF; */
+}
+
+
+/* =============== Footer Subscribe  ============================== */
+
+.footer__subscribe {
+    grid-area: subscribe;
+    max-width: 388px;
+}
+
+.footer__subscribe-title {
+    color: #161414;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.subscribe {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.subscribe__input-wrapper {
+    position: relative;
+    display: grid;
+    width: 300px;
+    height: 72px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #FFF;
+
+    padding-top: 32px;
+    padding-left: 56px;
+    background-image: url('./../../img/icons/email.svg');
+    background-repeat: no-repeat;
+    background-position: 16px center;
+
+}
+
+.subscribe__input {
+    color: #161414;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+.subscribe__label {
+    position: absolute;
+    top: 29px;
+    left: 56px; 
+
+    color: #5B5B5B;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.14; /* 114.286% */
+
+    transition: all 0.2s ease-in;
+    pointer-events: none;
+}
+
+/* .subscribe__input:valid ~ .subscribe__label, */
+.subscribe__input:focus ~ .subscribe__label {
+    top: 16px;
+}
+
+.subscribe__label--top {
+    top: 16px;
+}
+
+.button--subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ========================  MEDIA  ================================= */
+@media (max-width: 1300px) {
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer_row {
+        /* grid-template-columns: 1fr  3fr; */
+        grid-template-areas:
+            'copyright nav-row'
+            'subscribe subscribe';
+    }
+
+    .footer__subscribe {
+        max-width: 700px;
+         justify-self: center;
+    }
+
+    .footer__nav-wrapper {
+        justify-content: space-evenly ;
+        gap: 64px;
+    }
+
+    .subscribe__input-wrapper {
+        width: 100%;
+    }
+    
+    .footer__subscribe-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 840px) {
+    .footer_row {
+        gap: 32px;
+    }
+
+    .footer__nav-wrapper {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 740px) {
+    .footer_row {
+        /* grid-template-columns: 1fr; */
+        grid-template-areas:
+            'copyright'
+            'nav-row'
+            'subscribe';
+    }
+
+    .footer__copyright {
+        margin: 0 auto;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer__nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe {
+        flex-direction: column;
+    }
+
+    .button--subscribe {
+        width: 100%;
+    }
+}
